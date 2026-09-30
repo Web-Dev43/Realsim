@@ -1,1 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RealSim</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<header class="topbar">
+  <div>
+    <h1>🌎 RealSim</h1>
+    <p id="worldStatus">No world loaded</p>
+  </div>
+
+  <div class="top-actions">
+    <button id="saveBtn">💾 Save</button>
+    <button id="newWorldBtn">🎲 New World</button>
+  </div>
+</header>
+
+<main>
+
+  <section id="homeScreen" class="screen active">
+    <div class="hero">
+      <h2>Welcome to RealSim</h2>
+      <p>
+        Create a living world filled with unique people,
+        traits, jobs, relationships and events.
+      </p>
+
+      <button id="createWorldBtn" class="primary-btn">
+        🌎 Create World
+      </button>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <span>👥</span>
+        <strong id="populationStat">0</strong>
+        <small>Population</small>
+      </div>
+
+      <div class="stat-card">
+        <span>📅</span>
+        <strong id="dayStat">0</strong>
+        <small>Day</small>
+      </div>
+
+      <div class="stat-card">
+        <span>🏠</span>
+        <strong id="homeStat">0</strong>
+        <small>Homes</small>
+      </div>
+    </div>
+  </section>
+
+  <section id="worldScreen" class="screen">
+
+    <div class="screen-header">
+      <button class="back-btn" data-back="homeScreen">
+        ← Back
+      </button>
+      <h2>🌎 World</h2>
+    </div>
+
+    <div class="world-layout">
+
+      <div class="map-card">
+        <div class="map-header">
+          <h3>World Map</h3>
+          <span id="worldDay">Day 1</span>
+        </div>
+
+        <div id="worldMap" class="world-map"></div>
+      </div>
+
+      <div class="people-card">
+        <div class="people-header">
+          <h3>👥 People</h3>
+          <span id="peopleCount">0</span>
+        </div>
+
+        <div id="peopleList" class="people-list"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="personScreen" class="screen">
+
+    <div class="screen-header">
+      <button id="personBackBtn" class="back-btn">
+        ← Back
+      </button>
+
+      <h2>👤 Person</h2>
+    </div>
+
+    <div id="personProfile" class="profile-card"></div>
+
+  </section>
+
+</main>
+
+<nav class="bottom-nav">
+  <button id="homeNav">
+    🏠
+    <span>Home</span>
+  </button>
+
+  <button id="worldNav">
+    🌎
+    <span>World</span>
+  </button>
+</nav>
+
+<script src="script.js"></script>
+
+</body>
+</html>
